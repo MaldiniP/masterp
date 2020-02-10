@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block title %}My Index{% endblock %}
+{% block link %} {% endblock %}
+
+{% block content %}
+
+    <p>Welcome to my home page</p>
+
+    <!-- Don't forget the "|safe"! -->
+    <div class="card">
+        <div id="chart">
+            <embed type="image/svg+xml" src= {{ pie_data|safe }} />
+        </div>
+    </div>
+    <div class="card">
+        <div id="chart">
+            <embed type="image/svg+xml" src= {{ line_graph|safe }} />
+        </div>
+    </div>
+{% endblock %}
+
